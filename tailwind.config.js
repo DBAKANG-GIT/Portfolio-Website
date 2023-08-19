@@ -10,10 +10,7 @@ module.exports = {
         dark: "#333",
       },
       backgroundImage: {
-        showcase: "url('../project_resources/img/showcase.jpg')", //relative to output.css file
-      },
-      maxWidth: {
-        website: "1280px",
+        image: "url('../project_resources/img/showcase.jpg')", //relative to output.css file
       },
       fontFamily: {
         dosis: ["Dosis", "sans-serif", "Arial"],

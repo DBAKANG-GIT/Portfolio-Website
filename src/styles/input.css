@@ -1,32 +1,75 @@
+@import "utilities.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* <!-- Including one css file into other --> */
+
 /* General Styles */
-*{
+* {
   @apply m-0 p-0;
 }
 
 /* Body Styles */
-body{
-  @apply text-8xl text-center font-dosis leading-relaxed bg-white ;
+body {
+  @apply text-center font-dosis leading-relaxed bg-white;
 }
 
 /* Link Styles */
-a{
+a {
   @apply no-underline text-dark;
 }
 
 /* List Styles */
-ul{
+ul {
   @apply list-none;
 }
 
 /* Header Styles */
-h2, h3, h4{
-@apply uppercase;
+h2,
+h3,
+h4 {
+  @apply uppercase;
 }
 
+/* Logo */
+#logo {
+  /* Using the closest Tailwind element */
+  @apply w-16 h-16 text-white uppercase;
+}
+/* Main Nav */
+#main-nav {
+  @apply flex justify-between pt-4;
+}
 
+#main-nav ul {
+  @apply flex;
+}
 
+#main-nav ul li {
+  @apply py-4 px-6;
+}
 
+#main-nav ul li a {
+  /* The transparent is here so when you hover, it will then show up  */
+  /* Then setting hover effect */
+  @apply text-white uppercase  border-b-2 border-b-transparent pb-2 border-solid transition-colors duration-500 hover:border-medium;
+}
+
+#main-nav ul li a.current {
+  @apply border-main;
+}
+
+/* Header */
+
+#header-home {
+  @apply bg-image bg-center bg-no-repeat bg-right bg-cover h-screen text-white;
+}
+
+#header-home .header-content {
+  @apply text-center pt-[20%];
+}
+
+#header-home .header-content h1 {
+  @apply text-6xl;
+}

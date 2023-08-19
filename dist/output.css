@@ -1,6 +1,58 @@
-/*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
+.container {
+  /* Space either sides */
+  margin: auto;
+  max-width: 1280px;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Extendable to other buttons */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-style: none;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+#btn-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+#btn-main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+#btn-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn"]:hover,
+input[class^="btn-"]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -534,6 +586,42 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* <!-- Including one css file into other --> */
+
 /* General Styles */
 
 * {
@@ -548,7 +636,6 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   text-align: center;
   font-family: Dosis, sans-serif, Arial;
-  font-size: 6rem;
   line-height: 1.625;
 }
 
@@ -568,10 +655,86 @@ ul {
 
 /* Header Styles */
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
+/* Logo */
 
+#logo {
+  /* Using the closest Tailwind element */
+  height: 4rem;
+  width: 4rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
+/* Main Nav */
 
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+#main-nav ul {
+  display: flex;
+}
+
+#main-nav ul li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#main-nav ul li a {
+  /* The transparent is here so when you hover, it will then show up  */
+  /* Then setting hover effect */
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-bottom-color: transparent;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+#main-nav ul li a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity));
+}
+
+#main-nav ul li a.current {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 188 0 / var(--tw-border-opacity));
+}
+
+/* Header */
+
+#header-home {
+  height: 100vh;
+  background-image: url('../project_resources/img/showcase.jpg');
+  background-size: cover;
+  background-position: center;
+  background-position: right;
+  background-repeat: no-repeat;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#header-home .header-content {
+  padding-top: 20%;
+  text-align: center;
+}
+
+#header-home .header-content h1 {
+  font-size: 3.75rem;
+  line-height: 1;
+}
