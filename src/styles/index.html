@@ -1,62 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/61b9ca9b31.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../dist/output.css" />
-    <title>David Basil Akang | Frontend WebDeveloper</title>
-  </head>
 
-  <body>
-    <!-- Header -->
-    <!-- Below would be used for homepage where the header is different to other pages -->
-    <header id="header-home">
-      <!-- To Center Content -->
-      <div class="container">
-        <!-- Navigation Bar logo and links -->
-        <nav id="main-nav">
-          <img
-            src="../../project_resources/img/logo.png"
-            alt="Logo"
-            id="logo"
-          />
-          <ul>
-            <li><a href="../src/index.html" class="current">Home</a></li>
-            <li><a href="../src/about.html">About</a></li>
-            <li><a href="../src/work.html">Work</a></li>
-            <li><a href="../src/contact.html">Contact</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/61b9ca9b31.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../dist/output.css" />
+  <title>David Akang | Frontend WebDeveloper</title>
+</head>
 
-        <!-- Header Content -->
-        <div class="header-content">
-          <h1>
-            I am David The
-            <span
-              class="txt-type"
-              data-wait="3000"
-              data-words='["UI/UX Designer", "Frontend WebDeveloper", "YouTuber"]'
-            ></span>
-          </h1>
-          <p class="lead">
-            I Specialize in UI/UX design and also post Youtube content on Tech,
-            Careers and Finance
+<body>
+  <!-- Header -->
+  <!-- Below would be used for homepage where the header is different to other pages -->
+  <header id="header-home">
+    <!-- To Center Content -->
+    <div class="container">
+      <!-- Navigation Bar logo and links -->
+      <nav id="main-nav">
+        <img src="../../project_resources/img/logo.png" alt="Logo" id="logo" />
+        <ul>
+          <li><a href="../src/index.html" class="current">Home</a></li>
+          <li><a href="../src/about.html">About</a></li>
+          <li><a href="../src/work.html">Work</a></li>
+          <li><a href="../src/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Content -->
+      <div class="header-content">
+        <h1>
+          I am David The
+          <span class="txt-type" data-wait="3000"
+            data-words='["UI/UX Designer", "Frontend WebDeveloper", "YouTuber"]'></span>
+        </h1>
+        <p class="lead">
+          I Specialize in UI/UX design and also post Youtube content on Tech,
+          Careers and Finance
+        </p>
+        <a href="work.html" class="btn-light">View My Work</a>
+      </div>
+    </div>
+  </header>
+  <!-- Section A: Specialize -->
+  <section id="home-a" class="text-center py-8">
+    <div class="container">
+      <h2 class="section-title">I specialize in</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">
+        Creating captivating UI/UX layouts for websites and mobile
+        applications, and incorporating high-quality photography into your
+        designs.
+      </p>
+      <h2 class="section-title">Services</h2>
+      <div class="bottom-line"></div>
+
+      <div class="specials">
+        <div>
+          <i class="fas fa-file-alt fa-2x"></i>
+          <!-- Concepting -->
+          <h3>Concepting</h3>
+          <p>
+            Do you want a stunning website that attracts and engages your target audience?
+            I can help with conception and ideation, from brainstorming creative ideas to developing a solid strategy
+            that meets your business goals.
+            Get in touch today to start your website design journey.
           </p>
-          <a href="work.html" class="btn-light">View My Work</a>
+        </div>
+        <div>
+          <i class="fas fas fa-cogs fa-2x"></i>
+          <!-- UI/UX -->
+          <h3>UI/UX</h3>
+          <p>
+            User experience is key to the success of any website or application.
+            I can create visually appealing and intuitive interfaces that improve user engagement and satisfaction.
+            Contact me today to learn more about my UI/UX design services.
+        </div>
+        <!-- Visual Design -->
+        <div>
+          <i class="fas fa-palette fa-2x"></i>
+          <h3>Visual Design</h3>
+          <p>
+            Are you looking for a visually stunning website or application that stands out from the crowd?
+            I can help you create a visual identity that reflects your brand personality and resonates with your target
+            audience.
+            Let's work together to create a design that represents your brand and achieves your business goals..
+          </p>
+        </div>
+        <div>
+          <!-- Interaction -->
+          <i class="fas fa-thumbs-up fa-2x"></i>
+          <h3>Interaction</h3>
+          <p>
+            Do you want to create an engaging and intuitive user experience for your website or application?
+            I can help you design user flows, navigation, and other interactive elements that make your product easy and
+            enjoyable to use.
+            Let's work together to create a product that users love to interact with.
+          </p>
         </div>
       </div>
-    </header>
+  </section>
+  <!-- Section B: Clients and Stats -->
+  <section id="home-b" class="text-center py-4">
+
+    <div class="stats">
+      <div>
+        <ul>
+          <li><i class="fas fa-users fa-3x"></i></li>
+          <li class="stats-title">Clients</li>
+          <li class="stats-numbers">3</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fas fa-award fa-3x"></i></li>
+          <li class="stats-title">Awards</li>
+          <li class="stats-numbers">3</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fas fa-hourglass-half fa-3x"></i></li>
+          <li class="stats-title">Hours Worked</li>
+          <li class="stats-numbers">1000</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fas fa-code-branch fa-3x"></i></li>
+          <li class="stats-title">Projects Completed</li>
+          <li class="stats-numbers">
+            <p id="repoCount">Loading...</p>
+            <script src="../../project_resources/js/githubmetric.js"></script>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="sectionc"></div>
     <!-- Type Effect -->
     <script src="../../project_resources/js/typewriter.js"></script>
-  </body>
+</body>
+
 </html>

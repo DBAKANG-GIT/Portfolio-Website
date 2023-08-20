@@ -77,6 +77,46 @@ img {
   }
 }
 
-.lead{
-  @apply text-2xl mb-8; 
+.lead {
+  @apply text-2xl mb-8;
+}
+
+/* Home Sections  */
+#home {
+  /* Home Section A */
+  &-a {
+    .container {
+      .specials {
+        @apply mt-12 grid gap-4 grid-cols-4;
+        .fas {
+          @apply text-main hover:text-dark;
+        }
+      }
+    }
+  }
+  /* Home Section B */
+  &-b {
+    .stats {
+      @apply grid grid-cols-4;
+      li {
+        @apply leading-8;
+        &.stats-title {
+          @apply text-2xl;
+        }
+        &.stats-numbers {
+          @apply text-3xl font-bold;
+        }
+      }
+      div {
+        @apply py-12;
+        /* Style even list items */
+        &:nth-child(even) {
+          @apply bg-medium transition-all duration-500 hover:bg-main;
+        }
+        &:nth-child(odd) {
+          @apply bg-light transition-all duration-500 hover:bg-main;
+        }
+      }
+    }
+  }
 }
