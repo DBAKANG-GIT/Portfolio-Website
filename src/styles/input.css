@@ -1,4 +1,4 @@
-@import "utilities.css";
+@import url("utilities.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,44 +32,51 @@ h4 {
   @apply uppercase;
 }
 
+img {
+  @apply w-full;
+}
+
 /* Logo */
 #logo {
   /* Using the closest Tailwind element */
   @apply w-16 h-16 text-white uppercase;
 }
+
 /* Main Nav */
 #main-nav {
   @apply flex justify-between pt-4;
-}
-
-#main-nav ul {
-  @apply flex;
-}
-
-#main-nav ul li {
-  @apply py-4 px-6;
-}
-
-#main-nav ul li a {
-  /* The transparent is here so when you hover, it will then show up  */
-  /* Then setting hover effect */
-  @apply text-white uppercase  border-b-2 border-b-transparent pb-2 border-solid transition-colors duration-500 hover:border-medium;
-}
-
-#main-nav ul li a.current {
-  @apply border-main;
+  ul {
+    @apply flex;
+    li {
+      @apply py-4 px-6;
+      a {
+        /* The transparent is here so when you hover, it will then show up  */
+        /* Then setting hover effect */
+        @apply text-white uppercase  border-b-2 border-b-transparent pb-2 border-solid transition-colors duration-500 hover:border-medium;
+        &.current {
+          @apply border-main;
+        }
+      }
+    }
+  }
 }
 
 /* Header */
 
-#header-home {
-  @apply bg-image bg-center bg-no-repeat bg-right bg-cover h-screen text-white;
+#header {
+  &-home {
+    @apply bg-image bg-center bg-no-repeat bg-right bg-cover h-screen text-white;
+    .header-content {
+      @apply text-center pt-[20%];
+      h1 {
+        @apply text-6xl;
+      }
+    }
+  }
+  &-inner {
+  }
 }
 
-#header-home .header-content {
-  @apply text-center pt-[20%];
-}
-
-#header-home .header-content h1 {
-  @apply text-6xl;
+.lead{
+  @apply text-2xl mb-8; 
 }

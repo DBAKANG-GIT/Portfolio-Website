@@ -4,24 +4,33 @@
   @apply max-w-screen-xl px-6 m-auto overflow-hidden;
 }
 
-/* Extendable to other buttons */
-.btn {
+/* Buttons */
+%btn-shared {
   @apply inline-block py-3 px-8 transition-all duration-500 border-none cursor-pointer;
 }
 
-#btn-light {
-  @apply text-dark bg-light;
-}
-
-#btn-main {
-  @apply text-dark bg-main;
-}
-#btn-dark {
-  @apply text-white bg-dark;
+/* Extendable to other buttons */
+.btn {
+  &-main {
+    @extend %btn-shared;
+    @apply text-dark bg-main;
+  }
+  &-light {
+    @extend %btn-shared;
+    @apply text-dark bg-light hover:bg-main;
+  }
+  &-dark {
+    @extend %btn-shared;
+    @apply text-white bg-dark;
+  }
 }
 
 button[class^="btn-"]:hover,
-a[class^="btn"]:hover,
+a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   @apply text-dark bg-main;
 }
+
+/* .lead {
+  @apply text-;
+} */
