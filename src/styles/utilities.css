@@ -31,6 +31,14 @@ input[class^="btn-"]:hover {
   @apply text-dark bg-main;
 }
 
-/* .lead {
-  @apply text-;
-} */
+.lead {
+  @apply text-xl mb-8;
+}
+
+.bottom-line {
+  @apply h-0.5 w-12 bg-main block mx-auto mb-4;
+}
+
+.section-title {
+  @apply text-3xl block pb-2 text-center font-thin uppercase;
+}
