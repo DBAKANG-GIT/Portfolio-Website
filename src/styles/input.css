@@ -74,6 +74,7 @@ img {
     }
   }
   &-inner {
+    @apply bg-image bg-left-middle bg-no-repeat bg-cover h-1/6 border-b-4 border-solid border-main;
   }
 }
 
@@ -133,6 +134,37 @@ img {
     }
   }
 }
+
+/* About Section */
+#about {
+  &-a {
+    .about-info {
+      @apply grid grid-areas-layout grid-rows-layout gap-5;
+    }
+
+    /* Now we have to assign the grid areas */
+    /* Addom <ax height and with of image to avoid overflow */
+    .bio-image {
+      @apply object-cover object-top bg-no-repeat grid-in-bioimage max-w-full max-h-full h-auto;
+    }
+    .bio {
+      @apply grid-in-bio border-l-2 border-solid border-main border-r-2 p-3 bg-light;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas {
+      @apply text-main m-4;
+    }
+
+    .award-1 {
+      @apply grid-in-aw1;
+    }
+    .award-2 {
+      @apply grid-in-aw2;
+    }
+  }
+}
+
 /* Footer */
 #main-footer {
   @apply bg-dark text-white h-20;

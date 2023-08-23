@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      gridTemplateRows: {
+        layout: "30% auto",
+      },
+      gridTemplateAreas: {
+        layout: ["bioimage bio bio bio", "aw1 aw1 aw2 aw2"],
+      },
       colors: {
         main: "#ffbc00",
         light: "#f4f4f4",
@@ -11,6 +17,9 @@ module.exports = {
       },
       backgroundImage: {
         image: "url('../project_resources/img/showcase.jpg')", //relative to output.css file
+      },
+      backgroundPosition: {
+        "left-middle": "20% 30%",
       },
       fontFamily: {
         dosis: ["Dosis", "sans-serif", "Arial"],
@@ -21,5 +30,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
