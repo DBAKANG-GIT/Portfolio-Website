@@ -15,6 +15,10 @@ module.exports = {
       fontFamily: {
         dosis: ["Dosis", "sans-serif", "Arial"],
       },
+      lineHeight: {
+        12: "70px",
+        13: "96px",
+      },
     },
   },
   plugins: [],
