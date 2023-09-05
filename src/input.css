@@ -1,0 +1,16 @@
+/* // Import the Tailwind components and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Body */
+body{
+  @apply  text-center font-body text-6xl leading-relaxed bg-var-main-color; 
+
+}
+
+/* Links */
+a{
+  @apply no-underline
+}

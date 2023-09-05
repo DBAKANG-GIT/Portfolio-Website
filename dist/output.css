@@ -655,9 +655,24 @@ video {
   display: grid;
 }
 
+.bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+.bg-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-4 {
@@ -688,7 +703,6 @@ video {
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  text-align: center;
   font-family: Dosis, sans-serif, Arial;
   line-height: 1.625;
 }
@@ -942,11 +956,14 @@ img {
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
-/* About Section */
+/* About Sections */
+
+/* About A  */
 
 #about-a .about-info {
   display: grid;
-  grid-template-rows: 30% auto;
+  height: 550px;
+  grid-template-rows: 50% 50%;
   gap: 1.25rem;
   grid-template-areas: "bioimage bio bio bio"
 "aw1 aw1 aw2 aw2";
@@ -993,6 +1010,50 @@ img {
 
 #about-a .award-2 {
   grid-area: aw2;
+}
+
+/* About B  */
+
+#about-b h2,
+    #about-b h4 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#about-b .progress {
+  margin-bottom: 0.25rem;
+  height: 1.25rem;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+#about-b .progress div {
+  height: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 0 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#about-b .progress div:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+#about-c .about-logos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+#about-c .about-logos img {
+  height: 8rem;
+  width: 10rem;
 }
 
 /* Footer */

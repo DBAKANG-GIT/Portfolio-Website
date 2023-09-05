@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        layout: "30% auto",
+        layout: "50% 50%",
       },
       gridTemplateAreas: {
         layout: ["bioimage bio bio bio", "aw1 aw1 aw2 aw2"],

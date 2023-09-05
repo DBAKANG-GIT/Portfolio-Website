@@ -12,7 +12,7 @@
 
 /* Body Styles */
 body {
-  @apply text-center font-dosis leading-relaxed bg-white;
+  @apply font-dosis leading-relaxed bg-white;
 }
 
 /* Link Styles */
@@ -138,8 +138,9 @@ img {
 /* About Sections */
 #about {
   &-a {
+    /* About A  */
     .about-info {
-      @apply grid grid-areas-layout grid-rows-layout gap-5;
+      @apply grid grid-areas-layout grid-rows-layout gap-5 h-[550px];
     }
 
     /* Now we have to assign the grid areas */
@@ -161,6 +162,27 @@ img {
     }
     .award-2 {
       @apply grid-in-aw2;
+    }
+  }
+  /* About B  */
+  &-b {
+    h2,
+    h4 {
+      @apply text-white;
+    }
+    .progress {
+      @apply overflow-hidden h-5 bg-medium rounded mb-1 text-red-700;
+      div {
+        @apply h-full text-white text-center bg-main hover:bg-yellow-400;
+      }
+    }
+  }
+  &-c {
+    .about-logos {
+      @apply grid grid-cols-5 gap-8;
+      img {
+        @apply w-40 h-32;
+      }
     }
   }
 }
