@@ -187,6 +187,51 @@ img {
     }
   }
 }
+/* Contact Page */
+#contact {
+  &-a {
+    .text-fields {
+      @apply grid grid-areas-contactLayout gap-4;
+      /* Grid Areas */
+      .name-input {
+        @apply grid-in-name;
+      }
+      .email-input {
+        @apply grid-in-email;
+      }
+      .subject-input {
+        @apply grid-in-subject;
+      }
+      .phone-input {
+        @apply grid-in-phone;
+      }
+      .message-input {
+        @apply grid-in-message h-36;
+      }
+      .button-input {
+        @apply grid-in-button;
+      }
+
+      .text-input {
+        @apply py-2 px-4 border border-dark;
+      }
+      button[type="submit"] {
+        @apply w-full bg-dark hover:text-white hover:bg-main;
+      }
+    }
+  }
+
+  &-b {
+    .contact-info {
+      @apply grid grid-cols-3 text-white text-center;
+    }
+  }
+  &-c {
+    h1 {
+      @apply text-4xl font-bold mb-1;
+    }
+  }
+}
 
 /* Footer */
 #main-footer {

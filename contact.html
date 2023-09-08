@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/61b9ca9b31.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/output.css" />
+  <title>Contact Me | Frontend WebDeveloper</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- Below would be used for homepage where the header is different to other pages -->
+  <header id="header-inner">
+    <!-- To Center Content -->
+    <div class="container">
+      <!-- Navigation Bar logo and links -->
+      <nav id="main-nav">
+        <img src="../../project_resources/img/logo.png" alt="Logo" id="logo" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html" class="current">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Header Content -->
+    </div>
+  </header>
+  <!-- Section A: Contact Form -->
+  <section id="contact-a" class="text-center py-12">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="bottom-line"></div>
+      <p class="lead">Here is how you can reach me
+      </p>
+      <form>
+        <div class="text-fields">
+          <input type="text" class="text-input name-input" placeholder="Name"><br>
+          <input type="email" class="text-input email-input" placeholder="Email Address"><br>
+          <input type="text" class="text-input subject-input" placeholder="Subject"><br>
+          <input type="text" class="text-input phone-input" placeholder="Phone Number"><br>
+          <textarea class="text-input message-input" placeholder="Enter Message"></textarea>
+          <button type="submit" class="btn-dark button-input">Submit</button>
+
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Section B -->
+  <section id="contact-b" class="text-center py-12 bg-dark">
+    <div class="container">
+      <!-- Grid -->
+      <div class="contact-info">
+        <!-- Email Item -->
+        <div>
+          <i class="fas fa-envelope fa-2x"></i>
+          <h3>Email</h3>
+          <p>akangdavid69@gmail.com</p>
+        </div>
+        <!-- Phone Item -->
+        <div>
+          <i class="fas fa-phone fa-2x"></i>
+          <h3>Phone</h3>
+          <p>+44 (0) 7840052351</p>
+        </div>
+        <!-- Address Item -->
+        <div>
+          <i class="fas far fa-address-card fa-2x"></i>
+          <h3>Address</h3>
+          <p>London, United Kingdom</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section C -->
+  <section id="contact-c" class="text-center py-12 bg-main text-dark">
+    <div class="container">
+      <h1>Lets Start Your Next Project</h1>
+      <!-- Create a container for the map -->
+      <div id="map" class="w-full border-2 border-dark rounded-lg shadow-lg" style="height: 400px;"></div>
+
+      <!-- Include the Google Maps JavaScript API with your API key -->
+      <script>
+        function loadMap() {
+          var apiKey = process.env.GOOGLE_MAPS_API_KEY; // Use the name of the environment variable you set in Netlify
+          var script = document.createElement('script');
+          script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=initMap';
+          script.async = true;
+          script.defer = true;
+          document.head.appendChild(script);
+        }
+
+        // Initialize and create the map
+        function initMap() {
+          var myLatLng = { lat: 51.5074, lng: 0.1278 }; // Replace with your desired coordinates
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 8 // Adjust the zoom level as needed
+          });
+
+          // Add a marker to the map
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'My Location' // Replace with your marker title
+          });
+        }
+
+        // Call the loadMap function to load the Google Maps API
+        loadMap();
+      </script>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="footer-content container">
+      <p>Copyright &copy; 2023. All Rights Reserved</p>
+      <div class="social">
+        <a href="https://www.instagram.com/david_akang/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/davidbasilakang/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/david_akang/" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/davidakang/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

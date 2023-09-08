@@ -8,6 +8,12 @@ module.exports = {
       },
       gridTemplateAreas: {
         layout: ["bioimage bio bio bio", "aw1 aw1 aw2 aw2"],
+        contactLayout: [
+          "name email",
+          "subject phone",
+          "message message",
+          "button button",
+        ],
       },
       colors: {
         main: "#ffbc00",

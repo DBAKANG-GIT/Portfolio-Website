@@ -764,6 +764,23 @@ video {
   display: grid;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+}
+
 .bg-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -772,6 +789,11 @@ video {
 .bg-light {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 244 / var(--tw-bg-opacity));
+}
+
+.bg-main {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 0 / var(--tw-bg-opacity));
 }
 
 .py-12 {
@@ -796,6 +818,17 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* <!-- Including one css file into other --> */
@@ -1163,6 +1196,82 @@ img {
 #about-c .about-logos img {
   height: 8rem;
   width: 10rem;
+}
+
+/* Contact Page */
+
+#contact-a .text-fields {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "name email"
+"subject phone"
+"message message"
+"button button";
+}
+
+/* Grid Areas */
+
+#contact-a .text-fields .name-input {
+  grid-area: name;
+}
+
+#contact-a .text-fields .email-input {
+  grid-area: email;
+}
+
+#contact-a .text-fields .subject-input {
+  grid-area: subject;
+}
+
+#contact-a .text-fields .phone-input {
+  grid-area: phone;
+}
+
+#contact-a .text-fields .message-input {
+  height: 9rem;
+  grid-area: message;
+}
+
+#contact-a .text-fields .button-input {
+  grid-area: button;
+}
+
+#contact-a .text-fields .text-input {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#contact-a .text-fields button[type="submit"] {
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
+#contact-a .text-fields button[type="submit"]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#contact-b .contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#contact-c h1 {
+  margin-bottom: 0.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
 }
 
 /* Footer */
