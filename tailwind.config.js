@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       gridTemplateRows: {
@@ -27,6 +27,12 @@ module.exports = {
       lineHeight: {
         12: "70px",
         13: "96px",
+      },
+      scale: {
+        200: "2.00",
+      },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.2, 1, 0.3, 1)",
       },
     },
   },

@@ -1,4 +1,5 @@
 @import url("utilities.css");
+@import url("item_grid.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
