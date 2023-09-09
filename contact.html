@@ -85,20 +85,16 @@
   <section id="contact-c" class="text-center py-12 bg-main text-dark">
     <div class="container">
       <h1>Lets Start Your Next Project</h1>
+
+
       <!-- Create a container for the map -->
       <div id="map" class="w-full border-2 border-dark rounded-lg shadow-lg" style="height: 400px;"></div>
 
       <!-- Include the Google Maps JavaScript API with your API key -->
-      <script>
-        function loadMap() {
-          var apiKey = process.env.GOOGLE_MAPS_API_KEY; // Use the name of the environment variable you set in Netlify
-          var script = document.createElement('script');
-          script.src = 'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=initMap';
-          script.async = true;
-          script.defer = true;
-          document.head.appendChild(script);
-        }
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACMYFbA1_sqkf6yb3LVqJBGf77puUV8mo&callback=initMap"
+        async defer></script>
 
+      <script>
         // Initialize and create the map
         function initMap() {
           var myLatLng = { lat: 51.5074, lng: 0.1278 }; // Replace with your desired coordinates
@@ -115,10 +111,9 @@
             title: 'My Location' // Replace with your marker title
           });
         }
-
-        // Call the loadMap function to load the Google Maps API
-        loadMap();
       </script>
+    </div>
+
 
     </div>
 
