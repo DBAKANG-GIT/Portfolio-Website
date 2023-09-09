@@ -1267,6 +1267,17 @@ img {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+#contact-b .contact-info div > * {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#contact-b .contact-info div > *:hover {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 188 0 / var(--tw-text-opacity));
+}
+
 #contact-c h1 {
   margin-bottom: 0.25rem;
   font-size: 2.25rem;
