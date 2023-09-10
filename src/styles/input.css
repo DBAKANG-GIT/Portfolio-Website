@@ -45,11 +45,11 @@ img {
 
 /* Main Nav */
 #main-nav {
-  @apply flex justify-between pt-4;
+  @apply flex flex-col items-center md:items-stretch  md:flex-row justify-between pt-4;
   ul {
     @apply flex;
     li {
-      @apply py-4 px-6;
+      @apply p-4 md:py-4 md:px-6;
       a {
         /* The transparent is here so when you hover, it will then show up  */
         /* Then setting hover effect */
@@ -66,16 +66,16 @@ img {
 
 #header {
   &-home {
-    @apply bg-image bg-center bg-no-repeat bg-right bg-cover h-screen text-white;
+    @apply bg-image bg-center bg-no-repeat bg-right bg-cover border-b-2 border-solid border-main md:border-0  md:border-none md:border-b-0  h-40 md:h-[30rem] xl:h-screen  text-white;
     .header-content {
-      @apply text-center pt-[20%];
+      @apply hidden md:block text-center md:pt-20 xl:pt-[20%];
       h1 {
         @apply text-6xl;
       }
     }
   }
   &-inner {
-    @apply bg-image bg-left-middle bg-no-repeat bg-cover h-1/6 border-b-4 border-solid border-main;
+    @apply bg-image bg-center bg-right md:bg-left-middle bg-no-repeat bg-cover h-40 md:h-1/6 border-b-4 border-solid border-main;
   }
 }
 
@@ -89,7 +89,10 @@ img {
   &-a {
     .container {
       .specials {
-        @apply mt-12 grid gap-4 grid-cols-4;
+        @apply mt-12 grid gap-4 grid-cols-1 md:grid-cols-4;
+        div {
+          @apply border-b-2 border-main border-solid pb-4 last:border-none last md:border-none;
+        }
         .fas {
           @apply text-main hover:text-dark;
         }
@@ -99,7 +102,7 @@ img {
   /* Home Section B */
   &-b {
     .stats {
-      @apply grid grid-cols-4;
+      @apply grid grid-cols-1 md:grid-cols-4;
       li {
         @apply leading-8;
         &.stats-title {
@@ -123,7 +126,7 @@ img {
   }
   &-c {
     .process {
-      @apply grid gap-6 grid-cols-4 text-center;
+      @apply grid gap-6 grid-cols-1 md:grid-cols-4 text-center;
 
       &-icon {
         @apply rounded-full bg-dark text-white p-4 w-32 h-32 leading-13 text-center relative transition-all duration-1000 hover:bg-main;
@@ -180,7 +183,7 @@ img {
   }
   &-c {
     .about-logos {
-      @apply grid grid-cols-5 gap-8;
+      @apply grid grid-cols-1 md:grid-cols-5 gap-8;
       img {
         @apply w-40 h-32;
       }
@@ -223,7 +226,7 @@ img {
 
   &-b {
     .contact-info {
-      @apply grid grid-cols-3 text-white text-center;
+      @apply grid grid-cols-1 md:grid-cols-3 text-white text-center;
       div > * {
         @apply text-white hover:text-main hover:cursor-pointer;
       }
