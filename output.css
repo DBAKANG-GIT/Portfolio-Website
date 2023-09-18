@@ -1420,17 +1420,17 @@ img {
   grid-template-areas: "name email"
 "subject phone"
 "message message"
-"button button"
-"recaptcha recaptcha";
+"recaptcha recaptcha"
+"button button";
   display: grid;
   gap: 1rem;
   grid-template-areas: "name"
-"subject"
 "email"
+"subject"
 "phone"
 "message"
-"button"
-"recaptcha";
+"recaptcha"
+"button";
 }
 
 /* Grid Areas */
