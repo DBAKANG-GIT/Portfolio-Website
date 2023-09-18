@@ -40,17 +40,21 @@
       <div class="bottom-line"></div>
       <p class="lead">Here is how you can reach me
       </p>
-      <form>
+      <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
         <div class="text-fields">
-          <input type="text" class="text-input name-input" placeholder="Name"><br>
-          <input type="email" class="text-input email-input" placeholder="Email Address"><br>
-          <input type="text" class="text-input subject-input" placeholder="Subject"><br>
-          <input type="text" class="text-input phone-input" placeholder="Phone Number"><br>
-          <textarea class="text-input message-input" placeholder="Enter Message"></textarea>
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <input type="text" name="name" class="text-input name-input" placeholder="Name"><br>
+          <input type="email" name="email" class="text-input email-input" placeholder="Email Address"><br>
+          <input type="text" name="subject" class="text-input subject-input" placeholder="Subject"><br>
+          <input type="text" name="phone" class="text-input phone-input" placeholder="Phone Number"><br>
+          <textarea name="message" class="text-input message-input" placeholder="Enter Message"></textarea>
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="btn-dark button-input">Submit</button>
-
         </div>
-
       </form>
     </div>
   </section>
