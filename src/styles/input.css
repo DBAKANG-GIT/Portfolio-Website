@@ -217,6 +217,9 @@ img {
       .button-input {
         @apply grid-in-button;
       }
+      .recaptcha {
+        @apply grid-in-recaptcha;
+      }
 
       .text-input {
         @apply py-2 px-4 border border-dark;

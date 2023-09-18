@@ -17,6 +17,7 @@ module.exports = {
           "subject phone",
           "message message",
           "button button",
+          "recaptcha recaptcha",
         ],
         defaultContactLayout: [
           "name",
@@ -25,6 +26,7 @@ module.exports = {
           "phone",
           "message",
           "button",
+          "recaptcha",
         ],
       },
       colors: {

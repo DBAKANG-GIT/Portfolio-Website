@@ -773,8 +773,16 @@ video {
   margin-top: 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-10 {
@@ -787,6 +795,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .rounded-lg {
@@ -1404,7 +1420,8 @@ img {
   grid-template-areas: "name email"
 "subject phone"
 "message message"
-"button button";
+"button button"
+"recaptcha recaptcha";
   display: grid;
   gap: 1rem;
   grid-template-areas: "name"
@@ -1412,7 +1429,8 @@ img {
 "email"
 "phone"
 "message"
-"button";
+"button"
+"recaptcha";
 }
 
 /* Grid Areas */
@@ -1440,6 +1458,10 @@ img {
 
 #contact-a .text-fields .button-input {
   grid-area: button;
+}
+
+#contact-a .text-fields .recaptcha {
+  grid-area: recaptcha;
 }
 
 #contact-a .text-fields .text-input {
