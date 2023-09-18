@@ -1027,9 +1027,30 @@ img {
   }
 }
 
+@media (min-width: 768px) {
+
+  @media (orientation: landscape) {
+
+    #header-home .header-content {
+      padding-top: 2rem;
+    }
+  }
+}
+
 #header-home .header-content h1 {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+@media (min-width: 768px) {
+
+  @media (orientation: landscape) {
+
+    #header-home .header-content h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
 }
 
 #header-inner {
@@ -1136,8 +1157,16 @@ img {
 }
 
 #home-b .stats div {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+
+  #home-b .stats div {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 /* Style even list items */
@@ -1232,11 +1261,35 @@ img {
 
 #about-a .about-info {
   display: grid;
-  height: 550px;
+  height: 700px;
   grid-template-rows: 50% 50%;
   gap: 1.25rem;
-  grid-template-areas: "bioimage bio bio bio"
+  grid-template-areas: "bioimage"
+"bio"
+"aw1"
+"aw2";
+}
+
+@media (min-width: 640px) {
+
+  #about-a .about-info {
+    height: 800px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  #about-a .about-info {
+    grid-template-areas: "bioimage bio bio bio"
 "aw1 aw1 aw2 aw2";
+  }
+}
+
+@media (min-width: 1024px) {
+
+  #about-a .about-info {
+    height: 550px;
+  }
 }
 
 /* Now we have to assign the grid areas */
@@ -1315,9 +1368,21 @@ img {
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
+#about-c {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+  #about-c {
+    display: block;
+  }
+}
+
 #about-c .about-logos {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -1336,12 +1401,18 @@ img {
 /* Contact Page */
 
 #contact-a .text-fields {
-  display: grid;
-  gap: 1rem;
   grid-template-areas: "name email"
 "subject phone"
 "message message"
 "button button";
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "name"
+"subject"
+"email"
+"phone"
+"message"
+"button";
 }
 
 /* Grid Areas */
@@ -1409,6 +1480,29 @@ img {
   }
 }
 
+#contact-b .contact-info div {
+  margin-bottom: 1rem;
+  border-bottom-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(85 85 85 / var(--tw-border-opacity));
+  padding-bottom: 1rem;
+}
+
+#contact-b .contact-info div:last-child {
+  margin-bottom: 0px;
+  border-style: none;
+  padding-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+
+  #contact-b .contact-info div {
+    border-style: none;
+    padding-bottom: 0px;
+  }
+}
+
 #contact-b .contact-info div > * {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1430,18 +1524,46 @@ img {
 /* Footer */
 
 #main-footer {
-  height: 5rem;
+  height: 7rem;
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+
+  #main-footer {
+    height: 5rem;
+  }
+}
+
 #main-footer .footer-content {
   display: flex;
-  height: 5rem;
+  height: 6rem;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+
+  #main-footer .footer-content {
+    flex-direction: row;
+    padding: 0px;
+  }
+}
+
+#main-footer .footer-content p {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+
+  #main-footer .footer-content p {
+    margin-bottom: 0px;
+  }
 }
 
 #main-footer .footer-content .social a {

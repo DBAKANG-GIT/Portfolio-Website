@@ -68,9 +68,9 @@ img {
   &-home {
     @apply bg-image bg-center bg-no-repeat bg-right bg-cover border-b-2 border-solid border-main md:border-0  md:border-none md:border-b-0  h-40 md:h-[30rem] xl:h-screen  text-white;
     .header-content {
-      @apply hidden md:block text-center md:pt-20 xl:pt-[20%];
+      @apply hidden md:block md:landscape:pt-8 text-center md:pt-20 xl:pt-[20%];
       h1 {
-        @apply text-6xl;
+        @apply text-6xl md:landscape:text-5xl;
       }
     }
   }
@@ -113,7 +113,7 @@ img {
         }
       }
       div {
-        @apply py-12;
+        @apply pt-8 pb-4 md:py-12;
         /* Style even list items */
         &:nth-child(even) {
           @apply bg-medium transition-all duration-500 hover:bg-main;
@@ -144,7 +144,7 @@ img {
   &-a {
     /* About A  */
     .about-info {
-      @apply grid grid-areas-layout grid-rows-layout gap-5 h-[550px];
+      @apply grid grid-areas-defaultLayout md:grid-areas-layout grid-rows-layout gap-5 h-[700px] sm:h-[800px] lg:h-[550px];
     }
 
     /* Now we have to assign the grid areas */
@@ -182,8 +182,9 @@ img {
     }
   }
   &-c {
+    @apply hidden md:block;
     .about-logos {
-      @apply grid grid-cols-1 md:grid-cols-5 gap-8;
+      @apply grid items-center justify-center md:grid-cols-5 gap-8;
       img {
         @apply w-40 h-32;
       }
@@ -195,6 +196,8 @@ img {
   &-a {
     .text-fields {
       @apply grid grid-areas-contactLayout gap-4;
+      @apply grid grid-areas-defaultContactLayout gap-4;
+
       /* Grid Areas */
       .name-input {
         @apply grid-in-name;
@@ -227,6 +230,9 @@ img {
   &-b {
     .contact-info {
       @apply grid grid-cols-1 md:grid-cols-3 text-white text-center;
+      div {
+        @apply mb-4 pb-4 border-b border-lightGrey border-solid last:border-none last:mb-0 last:pb-0 md:border-none md:pb-0;
+      }
       div > * {
         @apply text-white hover:text-main hover:cursor-pointer;
       }
@@ -241,9 +247,12 @@ img {
 
 /* Footer */
 #main-footer {
-  @apply bg-dark text-white h-20;
+  @apply bg-dark text-white h-28 md:h-20;
   .footer-content {
-    @apply flex justify-between h-20 items-center;
+    @apply flex justify-between p-4 md:p-0 flex-col h-24 md:flex-row  items-center;
+    p {
+      @apply mb-1 md:mb-0;
+    }
     .social a {
       @apply text-white;
     }

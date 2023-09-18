@@ -6,13 +6,25 @@ module.exports = {
       gridTemplateRows: {
         layout: "50% 50%",
       },
+      screens: {
+        landscape: { raw: "(max-height: 500px)" },
+      },
       gridTemplateAreas: {
         layout: ["bioimage bio bio bio", "aw1 aw1 aw2 aw2"],
+        defaultLayout: ["bioimage", "bio", "aw1", "aw2"],
         contactLayout: [
           "name email",
           "subject phone",
           "message message",
           "button button",
+        ],
+        defaultContactLayout: [
+          "name",
+          "subject",
+          "email",
+          "phone",
+          "message",
+          "button",
         ],
       },
       colors: {
@@ -20,6 +32,7 @@ module.exports = {
         light: "#f4f4f4",
         medium: "#ccc",
         dark: "#333",
+        lightGrey: "#555",
       },
       backgroundImage: {
         image: "url('../project_resources/img/showcase.jpg')", //relative to output.css file
