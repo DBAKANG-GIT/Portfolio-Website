@@ -68,9 +68,9 @@ img {
   &-home {
     @apply bg-image bg-center bg-no-repeat bg-right bg-cover border-b-2 border-solid border-main md:border-0  md:border-none md:border-b-0  h-40 md:h-[30rem] xl:h-screen  text-white;
     .header-content {
-      @apply hidden md:block md:landscape:pt-8 text-center md:pt-20 xl:pt-[20%];
+      @apply hidden md:block text-center md:pt-20 xl:pt-[20%];
       h1 {
-        @apply text-6xl md:landscape:text-5xl;
+        @apply text-6xl;
       }
     }
   }

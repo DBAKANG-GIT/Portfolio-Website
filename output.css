@@ -1043,30 +1043,9 @@ img {
   }
 }
 
-@media (min-width: 768px) {
-
-  @media (orientation: landscape) {
-
-    #header-home .header-content {
-      padding-top: 2rem;
-    }
-  }
-}
-
 #header-home .header-content h1 {
   font-size: 3.75rem;
   line-height: 1;
-}
-
-@media (min-width: 768px) {
-
-  @media (orientation: landscape) {
-
-    #header-home .header-content h1 {
-      font-size: 3rem;
-      line-height: 1;
-    }
-  }
 }
 
 #header-inner {
